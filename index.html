@@ -1,0 +1,244 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown to HTML Live Preview</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+        }
+
+        textarea,
+        iframe {
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            resize: none;
+        }
+
+        textarea {
+            font-family: monospace;
+            font-size: 16px;
+            background: #f9f9f9;
+            border-right: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="markdown" placeholder="Write Markdown here..."># Hello Markdown 👋
+
+This is a **live preview** of Markdown to HTML conversion.
+
+- Type on the left
+- See preview on the right
+
+```html
+<h1>This is raw HTML</h1>
+Enjoy!</textarea>
+
+    <iframe id="preview"></iframe>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const textarea = document.getElementById('markdown');
+        const preview = document.getElementById('preview');
+        function updatePreview() {
+            const rawMarkdown = textarea.value; 
+            const html = marked.parse(rawMarkdown);
+            preview.srcdoc = html;
+        } textarea.addEventListener('input', updatePreview);
+        // Initial render 
+        updatePreview(); </script>
+</body>
+
+</head> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Markdown Live Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Global styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body
+    class="transition-all delay-[3s] text-black dark:text-white dark:bg-gradient-to-b dark:from-fuchsia-500 dark:via-black dark:to-fuchsia-500 bg-gradient-to-b from-purple-500 via-fuchsia-500 to-purple-500 bg-fixed bg-no-repeat bg-cover"
+  >
+    <!-- Landing Page -->
+    <section class="bg-transparent w-full block" id="landing">
+      <h1
+        class="text-center p-3 text-lg sm:text-xl md:text-2xl lg:text-4xl m-20 shadow-xl rounded-lg hover:animate-none animate-pulse"
+      >
+        Markdown Live Previewer
+      </h1>
+      <p class="text-justify mx-5">
+        Convert your Markdown into HTML in real time. Type, upload, edit, and
+        see your results instantly. Clean, simple, and fast.
+      </p>
+      <br />
+      <div class="flex flex-wrap flex-row justify-around">
+        <button
+          class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md"
+          id="start"
+        >
+          Start Editing
+        </button>
+        <div>
+          <label
+            class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md"
+            for="file"
+            >Upload File</label
+          >
+          <input
+            class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md"
+            title="file"
+            id="file"
+            type="file"
+          />
+        </div>
+      </div>
+      <br />
+      <hr class="w-[50%] mx-[25%]" />
+      <br />
+
+      <div>
+        <p for="mini" class="mt-10 pb-5 text-center bg-transparent">
+          Mini Preview
+        </p>
+        <div class="flex flex-col sm:flex-row flex-wrap h-full justify-around">
+          <textarea
+            id="mini"
+            class="m-2 p-10 flex-1 rounded-lg bg-transparent shadow-md shadow-white/50"
+          ></textarea>
+          <iframe
+            class="m-2 flex-1 rounded-lg shadow-md shadow-white/50"
+            id="miniIframe"
+          ></iframe>
+        </div>
+      </div>
+      <br />
+      <div class="flex flex-row justify-around m-10">
+        <div>Make with logic by Nishan</div>
+        <div>Github</div>
+      </div>
+    </section>
+
+    <!-- Editor Page -->
+    <section
+      class="hidden bg-transparent sm:flex-row flex-col flex"
+      id="editor"
+    >
+      <textarea
+        id="markdown"
+        class="p-2 bg-transparent w-[100vh] sm:w-[50%] dark:text-white text-black h-[100vh]"
+        placeholder="Write Markdown here..."
+      >
+# Welcome 👋
+
+This is a **live Markdown previewer**.
+
+- Type on the left
+- See results on the right
+
+```html
+<h1>This is raw HTML</h1>
+<p>Enjoy!</p>
+```</textarea
+      >
+      <hr class="sm:hidden" />
+      <iframe
+        class="dark:text-white w-screen sm:w-[50%] text-black h-[100vh]"
+        title="iframe"
+        id="preview"
+      ></iframe>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" type="module"></script>
+    <script>
+      let mini = document.getElementById("mini");
+      let miniIframe = document.getElementById("miniIframe");
+      let info = [
+        "> This is a blockquote.\n> Perfect for quotes or notes.",
+        "# Heading 1\n\nThis is a large heading.",
+        "## Heading 2\n\nSmaller heading with some text.",
+        "**Bold text** and *italic text* for styling.",
+        "- Item 1\n- Item 2\n- Item 3",
+        "1. First\n2. Second\n3. Third",
+        "[OpenAI](https://openai.com) is a link.",
+        "![Alt text](https://placehold.co/200x200)",
+        "> This is a blockquote.\n> Perfect for quotes or notes.",
+        "```js\nconsole.log('Hello, world!');\n```",
+        "| Name  | Age |\n|-------|-----|\n| Alice |  24 |\n| Bob   |  30 |",
+        "<div style='color: purple;'>This is raw HTML inside markdown.</div>",
+      ];
+
+      (async function show() {
+        const preview = await info.map((e) => {
+          return marked.parse(e);
+        });
+        let start = 0;
+        setInterval(() => {
+          let val = preview[start % preview.length];
+          let md = info[start % info.length];
+          mini.value = md;
+
+          miniIframe.srcdoc = `
+    <html>
+    <head>
+       <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 5px;
+            color: white;
+            background: transparent;
+          }
+          pre {
+
+            color:black;
+            background: #ffffff50;
+            padding: 10px;
+
+            border-radius: 5px;
+            width:fit-content;
+
+
+          }
+          code {            
+
+            font-family: monospace;
+            color:black
+          }
+          blockquote {
+            background-color: #e0f7fa50;  /* Light cyan background */
+            border-left: 5px solid #00acc1; /* Accent bar */
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            color:black
+          }
+        </style>
+      </head>
+      <body >${val}</body>
+    </html>`;
+          start++;
+        }, 3000);
+      })();
+    </script>
+  </body>
+</html>

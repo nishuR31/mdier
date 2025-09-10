@@ -1,10 +1,9 @@
 
 # Markdown Live Previewer
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/your-username/markdown-live-preview)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://yourwebsite.com)
-[![Stars](https://img.shields.io/github/stars/your-username/markdown-live-preview?style=social)](https://github.com/your-username/markdown-live-preview/stargazers)
+[![Version](https://img.shields.io/badge/version%201.0.0-blue)](https://github.com/your-username/markdown-live-preview)
+[![Website](https://img.shields.io/badge/website%20live-red)](https://yourwebsite.com)
+[![Stars](https://img.shields.io/github/stars/nishuR31/mdier?style=social)](https://github.com/your-username/markdown-live-preview/stargazers)
 
 ---
 

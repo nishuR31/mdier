@@ -61,93 +61,82 @@ Enjoy!</textarea>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Markdown Live Preview</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      /* Global styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    </style>
-  </head>
-  <body
-    class="transition-all delay-[3s] text-black dark:text-white dark:bg-gradient-to-b dark:from-fuchsia-500 dark:via-black dark:to-fuchsia-500 bg-gradient-to-b from-purple-500 via-fuchsia-500 to-purple-500 bg-fixed bg-no-repeat bg-cover"
-  >
-    <!-- Landing Page -->
-    <section class="bg-transparent w-full block" id="landing">
-      <h1
-        class="text-center p-3 text-lg sm:text-xl md:text-2xl lg:text-4xl m-20 shadow-xl rounded-lg hover:animate-none animate-pulse"
-      >
-        Markdown Live Previewer
-      </h1>
-      <p class="text-justify mx-5">
-        Convert your Markdown into HTML in real time. Type, upload, edit, and
-        see your results instantly. Clean, simple, and fast.
-      </p>
-      <br />
-      <div class="flex flex-wrap flex-row justify-around">
-        <button
-          class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md"
-          id="start"
-        >
-          Start Editing
-        </button>
-        <div>
-          <label
-            class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md"
-            for="file"
-            >Upload File</label
-          >
-          <input
-            class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md"
-            title="file"
-            id="file"
-            type="file"
-          />
-        </div>
-      </div>
-      <br />
-      <hr class="w-[50%] mx-[25%]" />
-      <br />
+<head>
+  <meta charset="UTF-8" />
+  <title>Markdown Live Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
+  <style>
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body
+  class="transition-all delay-[3s] text-black dark:text-white dark:bg-gradient-to-b dark:from-fuchsia-500 dark:via-black dark:to-fuchsia-500 bg-gradient-to-b from-purple-500 via-fuchsia-500 to-purple-500 bg-fixed bg-no-repeat bg-cover">
+  <!-- Landing Page -->
+  <section class="bg-transparent w-full block" id="landing">
+    <h1
+      class="text-center p-3 text-lg sm:text-xl md:text-2xl lg:text-4xl m-20 shadow-xl rounded-lg hover:animate-none animate-pulse">
+      Markdown Live Previewer
+    </h1>
+    <p class="text-justify mx-5">
+      Convert your Markdown into HTML in real time. Type, upload, edit, and
+      see your results instantly. Clean, simple, and fast.
+    </p>
+    <br />
+    <div class="flex flex-wrap flex-row justify-around">
+      <button class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md" id="start">
+        Start Editing
+      </button>
       <div>
-        <p for="mini" class="mt-10 pb-5 text-center bg-transparent">
-          Mini Preview
-        </p>
-        <div class="flex flex-col sm:flex-row flex-wrap h-full justify-around">
-          <textarea
-            id="mini"
-            class="m-2 p-10 flex-1 rounded-lg bg-transparent shadow-md shadow-white/50"
-          ></textarea>
-          <iframe
-            class="m-2 flex-1 rounded-lg shadow-md shadow-white/50"
-            id="miniIframe"
-          ></iframe>
-        </div>
+        <label class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md" for="file">Upload File</label>
+        <input class="bg-transparent rounded-lg p-3 shadow-lg hover:backdrop-blur-md" title="file" id="file"
+          type="file" />
       </div>
-      <br />
-      <div class="flex flex-row justify-around m-10">
-        <div>Make with logic by Nishan</div>
-        <div>Github</div>
-      </div>
-    </section>
+    </div>
+    <br />
+    <hr class="w-[50%] mx-[25%]" />
+    <br />
 
-    <!-- Editor Page -->
-    <section
-      class="hidden bg-transparent sm:flex-row flex-col flex"
-      id="editor"
-    >
-      <textarea
-        id="markdown"
-        class="p-2 bg-transparent w-[100vh] sm:w-[50%] dark:text-white text-black h-[100vh]"
-        placeholder="Write Markdown here..."
-      >
+    <div>
+      <p for="mini" class="mt-10 pb-5 text-center bg-transparent">
+        Mini Preview
+      </p>
+      <div class="flex flex-col sm:flex-row flex-wrap h-full justify-around">
+        <textarea id="mini" class="m-2 p-10 flex-1 rounded-lg bg-transparent shadow-md shadow-white/50"></textarea>
+        <iframe class="m-2 flex-1 rounded-lg shadow-md shadow-white/50" id="miniIframe"></iframe>
+      </div>
+    </div>
+    <br />
+    <i class="flex flex-row justify-around m-10">
+      <div>Make with logic by Nishan</div>
+      <a href="https://github.com/nishuR31" target="_blank"><img
+          src="https://img.icons8.com/?size=50&id=efFfwotdkiU5&format=png&color=000000">
+        <a href="mailto:dreamgf691@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="50" height="50" viewBox="0 0 48 48">
+            <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
+            <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
+            <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon>
+            <path fill="#c62828"
+              d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path>
+            <path fill="#fbc02d"
+              d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
+            </path>
+          </svg>
+          </p>
+  </section>
+
+  <!-- Editor Page -->
+  <section class="hidden bg-transparent sm:flex-row flex-col flex" id="editor">
+    <textarea id="markdown" class="p-2 bg-transparent w-[100vh] sm:w-[50%] dark:text-white text-black h-[100vh]"
+      placeholder="Write Markdown here...">
 # Welcome 👋
 
 This is a **live Markdown previewer**.
@@ -158,47 +147,42 @@ This is a **live Markdown previewer**.
 ```html
 <h1>This is raw HTML</h1>
 <p>Enjoy!</p>
-```</textarea
-      >
-      <hr class="sm:hidden" />
-      <iframe
-        class="dark:text-white w-screen sm:w-[50%] text-black h-[100vh]"
-        title="iframe"
-        id="preview"
-      ></iframe>
-    </section>
+```</textarea>
+    <hr class="sm:hidden" />
+    <iframe class="dark:text-white w-screen sm:w-[50%] text-black h-[100vh]" title="iframe" id="preview"></iframe>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="script.js" type="module"></script>
-    <script>
-      let mini = document.getElementById("mini");
-      let miniIframe = document.getElementById("miniIframe");
-      let info = [
-        "> This is a blockquote.\n> Perfect for quotes or notes.",
-        "# Heading 1\n\nThis is a large heading.",
-        "## Heading 2\n\nSmaller heading with some text.",
-        "**Bold text** and *italic text* for styling.",
-        "- Item 1\n- Item 2\n- Item 3",
-        "1. First\n2. Second\n3. Third",
-        "[OpenAI](https://openai.com) is a link.",
-        "![Alt text](https://placehold.co/200x200)",
-        "> This is a blockquote.\n> Perfect for quotes or notes.",
-        "```js\nconsole.log('Hello, world!');\n```",
-        "| Name  | Age |\n|-------|-----|\n| Alice |  24 |\n| Bob   |  30 |",
-        "<div style='color: purple;'>This is raw HTML inside markdown.</div>",
-      ];
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js" type="module"></script>
+  <script>
+    let mini = document.getElementById("mini");
+    let miniIframe = document.getElementById("miniIframe");
+    let info = [
+      "> This is a blockquote.\n> Perfect for quotes or notes.",
+      "# Heading 1\n\nThis is a large heading.",
+      "## Heading 2\n\nSmaller heading with some text.",
+      "**Bold text** and *italic text* for styling.",
+      "- Item 1\n- Item 2\n- Item 3",
+      "1. First\n2. Second\n3. Third",
+      "[OpenAI](https://openai.com) is a link.",
+      "![Alt text](https://placehold.co/200x200)",
+      "> This is a blockquote.\n> Perfect for quotes or notes.",
+      "```js\nconsole.log('Hello, world!');\n```",
+      "| Name  | Age |\n|-------|-----|\n| Alice |  24 |\n| Bob   |  30 |",
+      "<div style='color: purple;'>This is raw HTML inside markdown.</div>",
+    ];
 
-      (async function show() {
-        const preview = await info.map((e) => {
-          return marked.parse(e);
-        });
-        let start = 0;
-        setInterval(() => {
-          let val = preview[start % preview.length];
-          let md = info[start % info.length];
-          mini.value = md;
+    (async function show() {
+      const preview = await info.map((e) => {
+        return marked.parse(e);
+      });
+      let start = 0;
+      setInterval(() => {
+        let val = preview[start % preview.length];
+        let md = info[start % info.length];
+        mini.value = md;
 
-          miniIframe.srcdoc = `
+        miniIframe.srcdoc = `
     <html>
     <head>
        <style>
@@ -236,9 +220,10 @@ This is a **live Markdown previewer**.
       </head>
       <body >${val}</body>
     </html>`;
-          start++;
-        }, 3000);
-      })();
-    </script>
-  </body>
+        start++;
+      }, 3000);
+    })();
+  </script>
+</body>
+
 </html>

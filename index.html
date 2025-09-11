@@ -1,63 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Markdown to HTML Live Preview</title>
-    <style>
-        body {
-            display: flex;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
-        }
-
-        textarea,
-        iframe {
-            width: 50%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            border: none;
-            resize: none;
-        }
-
-        textarea {
-            font-family: monospace;
-            font-size: 16px;
-            background: #f9f9f9;
-            border-right: 1px solid #ccc;
-        }
-    </style>
-</head>
-
-<body>
-    <textarea id="markdown" placeholder="Write Markdown here..."># Hello Markdown 👋
-
-This is a **live preview** of Markdown to HTML conversion.
-
-- Type on the left
-- See preview on the right
-
-```html
-<h1>This is raw HTML</h1>
-Enjoy!</textarea>
-
-    <iframe id="preview"></iframe>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        const textarea = document.getElementById('markdown');
-        const preview = document.getElementById('preview');
-        function updatePreview() {
-            const rawMarkdown = textarea.value; 
-            const html = marked.parse(rawMarkdown);
-            preview.srcdoc = html;
-        } textarea.addEventListener('input', updatePreview);
-        // Initial render 
-        updatePreview(); </script>
-</body>
-
-</head> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +20,7 @@ Enjoy!</textarea>
 </head>
 
 <body
-  class="transition-all delay-[3s] text-black dark:text-white dark:bg-gradient-to-b dark:from-fuchsia-500 dark:via-black dark:to-fuchsia-500 bg-gradient-to-b from-purple-500 via-fuchsia-500 to-purple-500 bg-fixed bg-no-repeat bg-cover">
+  class="transition-all delay-[3s] text-black dark:text-white dark:bg-gradient-to-b dark:from-purple-500 dark:via-black dark:to-purple-500 bg-gradient-to-b from-purple-500 via-purple-100 to-purple-500 bg-fixed bg-no-repeat bg-cover">
   <!-- Landing Page -->
   <section class="bg-transparent w-full block" id="landing">
     <h1
@@ -118,8 +59,8 @@ Enjoy!</textarea>
     <i class="flex flex-row justify-around m-10">
       <div>Make with logic by Nishan</div>
       <a href="https://github.com/nishuR31" target="_blank"><img
-          src="https://img.icons8.com/?size=50&id=efFfwotdkiU5&format=png&color=000000">
-        <a href="mailto:dreamgf691@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          src="https://img.icons8.com/?size=50&id=efFfwotdkiU5&format=png&color=000000"></a>
+        <a href="mailto:dreamgf691@gmail.com" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="50" height="50" viewBox="0 0 48 48">
             <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
             <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
@@ -129,13 +70,13 @@ Enjoy!</textarea>
             <path fill="#fbc02d"
               d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
             </path>
-          </svg>
+          </svg></a>
           </p>
   </section>
 
   <!-- Editor Page -->
-  <section class="hidden bg-transparent sm:flex-row flex-col flex" id="editor">
-    <textarea id="markdown" class="p-2 bg-transparent w-[100vh] sm:w-[50%] dark:text-white text-black h-[100vh]"
+  <section class="hidden bg-transparent sm:flex-row flex-col flex-wrap justify-around flex" id="editor">
+    <textarea id="markdown" class="p-2 bg-transparent sm:w-[50%] dark:text-white text-black h-[100vh]"
       placeholder="Write Markdown here...">
 # Welcome 👋
 
@@ -149,7 +90,7 @@ This is a **live Markdown previewer**.
 <p>Enjoy!</p>
 ```</textarea>
     <hr class="sm:hidden" />
-    <iframe class="dark:text-white w-screen sm:w-[50%] text-black h-[100vh]" title="iframe" id="preview"></iframe>
+    <iframe class="dark:text-white sm:w-[50%] w-full text-black h-[100vh]" title="iframe" id="preview"></iframe>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

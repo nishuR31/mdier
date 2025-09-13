@@ -30,35 +30,24 @@ Markdown Live Previewer is a simple, responsive web app that converts Markdown i
 ## Screenshots
 
 **Landing Page**  
-![Landing Page](https://placehold.co/600x400)
+![Landing Page](assets/homepage.png)
 
 **Editor Page**  
-![Editor Page](https://placehold.co/600x400)
+![Editor Page](assets/editor.png)
 
 **Mini Preview**  
-![Mini Preview](https://placehold.co/600x400)
+![Mini Preview](assets/preview.png)
 
 ---
 
 ## Live Demo
-Check out the live version here: [Markdown Live Previewer](https://yourwebsite.com)
-
----
-
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/markdown-live-preview.git
-````
-
-2. Open `index.html` in your browser.
+Check out the live version here: [Markdown Live Previewer](https://mdier.vercel.app)
 
 ---
 
 ## Usage
 
-1. Open the landing page.
+1. Visit the site [Mdier](https://mdier.vercel.app)
 2. Click **Start Editing** to open the editor.
 3. Type Markdown on the left and see the preview on the right.
 4. Optionally, upload a Markdown file to populate the editor.

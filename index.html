@@ -20,9 +20,9 @@
 </head>
 
 <body
-  class="transition-all delay-[3s] text-black dark:text-white dark:bg-gradient-to-b dark:from-purple-500 dark:via-black dark:to-purple-500 bg-gradient-to-b from-purple-500 via-purple-100 to-purple-500 bg-fixed bg-no-repeat bg-cover">
+  class="transition-all delay-[2s] text-black dark:text-white dark:bg-gradient-to-b dark:from-purple-500 dark:via-black dark:to-purple-500 bg-gradient-to-b from-purple-500 via-purple-100 to-purple-500 bg-fixed bg-no-repeat bg-cover">
   <!-- Landing Page -->
-  <section class="bg-transparent w-full block" id="landing">
+  <section class="bg-transparent w-full block " id="landing">
     <h1
       class="text-center p-3 text-lg sm:text-xl md:text-2xl lg:text-4xl m-20 shadow-xl rounded-lg hover:animate-none animate-pulse">
       Markdown Live Previewer
@@ -75,8 +75,8 @@
   </section>
 
   <!-- Editor Page -->
-  <section class="hidden bg-transparent sm:flex-row flex-col flex-wrap justify-around flex" id="editor">
-    <textarea id="markdown" class="p-2 bg-transparent sm:w-[50%] dark:text-white text-black h-[100vh]"
+  <section class=" w-full h-screen hidden bg-transparent sm:flex-row flex-col flex-wrap justify-between flex" id="editor">
+    <textarea id="markdown" class="bg-transparent w-full dark:text-white text-black h-full sm:w-1/2 resize-none p-4"
       placeholder="Write Markdown here...">
 # Welcome 👋
 
@@ -90,7 +90,7 @@ This is a **live Markdown previewer**.
 <p>Enjoy!</p>
 ```</textarea>
     <hr class="sm:hidden" />
-    <iframe class="dark:text-white sm:w-[50%] w-full text-black h-[100vh]" title="iframe" id="preview"></iframe>
+    <iframe class="dark:text-white text-black h-full w-full sm:w-1/2 p-4" title="iframe" id="preview"></iframe>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

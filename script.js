@@ -9,9 +9,9 @@ const themeBtn = document.getElementById("theme");
 // Show editor and hide landing
 async function startEditor(text = "") {
   landing.classList.add("hidden");
-  //   landing.classList.remove("block");
+    landing.classList.remove("block");
   editor.classList.remove("hidden");
-  //   editor.classList.add("block");
+    editor.classList.add("block");
 
   if (text) {
     textarea.value = text;
@@ -39,7 +39,7 @@ function updatePreview(rawMarkdown = textarea.value) {
 <style>
           body {
             font-family: Arial, sans-serif;
-            padding: 10px;
+            padding: 5px;
             color: white;
             background: transparent;
           }

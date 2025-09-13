@@ -131,10 +131,10 @@
     </div>
     <br />
     <i class="flex flex-row justify-around m-10">
-      <div>Make with logic by Nishan</div>
-      <a href="https://github.com/nishuR31" target="_blank"><img
+      <div><img alt="Mdier" id="logo" src="./assets/logo.png" width="50px" height="50px">with logic by Nishan</div>
+      <a href="https://github.com/nishuR31" target="_blank"><img alt="Github"
           src="https://img.icons8.com/?size=50&id=efFfwotdkiU5&format=png&color=000000"></a>
-        <a href="mailto:dreamgf691@gmail.com" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        <a atl="Mail" href="mailto:dreamgf691@gmail.com" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="50" height="50" viewBox="0 0 48 48">
             <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
             <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
@@ -170,8 +170,18 @@ This is a **live Markdown previewer**.
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="script.js" type="module"></script>
   <script>
+
     let mini = document.getElementById("mini");
     let miniIframe = document.getElementById("miniIframe");
+    let logo=document.getElementById("logo");
+
+    logo.addEventListener("click",()=>{
+      window.scrollTo({top:0,behavior: "smooth" // optional for smooth scrolling
+})
+    })
+    
+
+
     let info = [
       "> This is a blockquote.\n> Perfect for quotes or notes.",
       "# Heading 1\n\nThis is a large heading.",

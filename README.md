@@ -1,9 +1,9 @@
 
 # Markdown Live Previewer
 
-[![Version](https://img.shields.io/badge/version%201.0.0-blue)](https://github.com/your-username/markdown-live-preview)
-[![Website](https://img.shields.io/badge/website%20live-red)](https://yourwebsite.com)
-[![Stars](https://img.shields.io/github/stars/nishuR31/mdier?style=social)](https://github.com/your-username/markdown-live-preview/stargazers)
+[![Version](https://img.shields.io/badge/version%201.0.0-blue)](https://github.com/nishuR31/markdown-live-preview)
+[![Website](https://img.shields.io/badge/website%20live-green)](https://mdier.vercel.app)
+[![Stars](https://img.shields.io/github/stars/nishuR31/mdier?style=social)](https://github.com/nishuR31/mdier/stargazers)
 
 ---
 
@@ -78,6 +78,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Author
 
 Made with 💡 and logic by **Nishan**
-[GitHub](https://github.com/your-username) | [Website](https://yourwebsite.com)
+[GitHub](https://github.com/nishuR31) | [Website](https://mdier.vercel.app)
 
 
